@@ -173,7 +173,7 @@ def lambda_handler(event, context):
     import locale
 
     locale_string = locale.normalize(event['request']['locale'])
-    #locale.setlocale(locale.LC_ALL, locale_string)
+    locale.setlocale(locale.LC_ALL, locale_string)
 
     print("event.request.locale=" +
           locale_string)
